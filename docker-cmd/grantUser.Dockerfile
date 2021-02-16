@@ -20,7 +20,7 @@ RUN unzip code.zip && mv $HTML_PATH-gh-pages/* . && echo $HTML_PATH > ./env.html
 #Change owner of directory to application user
 RUN useradd $user && chown $user:$user /var/www/html/ -R
 
-#Change user to application user
+#Change user to user arg
 USER $user
 
 #Delete directory by application user
